@@ -44,3 +44,12 @@ pacman -Sy openssh
 ./install_ssh.sh
 systemctl enable sshd
 ```
+### fail2ban
+```bash
+pacman -Sy fail2ban
+./install_fail2ban.sh
+systemctl enable fail2ban
+reboot  # Load required kernel modules.
+```
+- https://github.com/fail2ban/fail2ban/wiki
+- https://www.digitalocean.com/community/tutorials/how-fail2ban-works-to-protect-services-on-a-linux-server
