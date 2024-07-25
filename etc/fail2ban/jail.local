@@ -11,3 +11,18 @@ logpath = %(nginx_error_log)s
 enabled = true
 port    = http,https
 logpath = %(nginx_access_log)s
+
+[postfix]
+enabled = true
+mode    = more
+port    = smtp,465,submission
+logpath = %(postfix_log)s
+backend = %(postfix_backend)s
+
+[postfix-rbl]
+enabled  = true
+filter   = postfix[mode=rbl]
+port     = smtp,465,submission
+logpath  = %(postfix_log)s
+backend  = %(postfix_backend)s
+maxretry = 1

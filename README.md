@@ -63,5 +63,17 @@ systemctl enable nginx
 ```bash
 pacman -Sy postfix
 ./install_postfix.sh
+postalias /etc/postfix/aliases
+systemctl restart postfix
+systemctl enable postfix
 ```
 - https://wiki.archlinux.org/title/Postfix
+
+Besides the postfix config, add DNS records in linode under Domain / example.org
+```
+@      MX  10  example.org.
+@      TXT  "v=spf1 mx -all"
+```
+and set reverse DNS in linode in Linodes / Network / IP Addresses / Edit RDNS.
+- https://www.linode.com/docs/guides/dns-overview/
+- http://www.open-spf.org/SPF_Record_Syntax/

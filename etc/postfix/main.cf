@@ -104,6 +104,7 @@ mail_owner = postfix
 # parameters.
 #
 #mydomain = domain.tld
+mydomain = example.org
 
 # SENDING MAIL
 # 
@@ -120,6 +121,7 @@ mail_owner = postfix
 #
 #myorigin = $myhostname
 #myorigin = $mydomain
+myorigin = $mydomain
 
 # RECEIVING MAIL
 
@@ -184,6 +186,7 @@ mail_owner = postfix
 #mydestination = $myhostname, localhost.$mydomain, localhost, $mydomain
 #mydestination = $myhostname, localhost.$mydomain, localhost, $mydomain,
 #	mail.$mydomain, www.$mydomain, ftp.$mydomain
+mydestination = $myhostname, localhost.$mydomain, localhost, $mydomain
 
 # REJECTING MAIL FOR UNKNOWN LOCAL USERS
 #
@@ -443,6 +446,7 @@ alias_database = $alias_maps
 #
 #home_mailbox = Mailbox
 #home_mailbox = Maildir/
+home_mailbox = Maildir/
  
 # The mail_spool_directory parameter specifies the directory where
 # UNIX-style mailboxes are kept. The default setting depends on the
