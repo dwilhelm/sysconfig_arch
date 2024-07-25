@@ -59,3 +59,9 @@ pacman -Sy nginx
 ./install_nginx.sh
 systemctl enable nginx
 ```
+### postfix
+```bash
+pacman -Sy postfix
+./install_postfix.sh
+```
+- https://wiki.archlinux.org/title/Postfix
