@@ -77,3 +77,10 @@ Besides the postfix config, add DNS records in linode under Domain / example.org
 and set reverse DNS in linode in Linodes / Network / IP Addresses / Edit RDNS.
 - https://www.linode.com/docs/guides/dns-overview/
 - http://www.open-spf.org/SPF_Record_Syntax/
+### SpamAssassin
+```bash
+pacman -Sy spamassassin
+./install_spamassassin.sh
+```
+- https://wiki.archlinux.org/title/SpamAssassin
+- https://wiki.archlinux.org/title/Postfix#SpamAssassin
