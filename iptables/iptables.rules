@@ -8,6 +8,9 @@
 # Allow ping.
 -A INPUT -p icmp -m state --state NEW --icmp-type 8 -j ACCEPT
 
+# Allow SSH on custom port.
+-A INPUT -p tcp --dport 22 -m state --state NEW -j ACCEPT
+
 # Allow inbound traffic from established connections.
 # This includes ICMP error returns.
 -A INPUT -m state --state ESTABLISHED,RELATED -j ACCEPT

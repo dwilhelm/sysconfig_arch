@@ -38,3 +38,9 @@ pacman -Sy iptables
 ./install_iptables.sh
 systemctl enable iptables
 ```
+### OpenSSH
+```bash
+pacman -Sy openssh
+./install_ssh.sh
+systemctl enable sshd
+```
