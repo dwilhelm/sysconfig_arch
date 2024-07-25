@@ -1,3 +1,7 @@
+[DEFAULT]
+bantime  = 1d
+findtime = 30m
+
 [sshd]
 enabled = true
 port    = 22
@@ -6,6 +10,11 @@ port    = 22
 enabled = true
 port    = http,https
 logpath = %(nginx_error_log)s
+
+[nginx-botsearch]
+enabled  = true
+port     = http,https
+logpath  = %(nginx_error_log)s
 
 [nginx-bad-request]
 enabled = true
