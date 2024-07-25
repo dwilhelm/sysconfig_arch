@@ -29,6 +29,9 @@ visudo  # Grant run rights to wheel.
 Run admin steps as the non-root user with sudo. Run all remaining steps from
 the repo root to install config files.
 
+The file `diff.sh` will compare installed files to repo files as a unified
+diff with no context.
+
 ### iptables
 ```bash
 pacman -Sy iptables
