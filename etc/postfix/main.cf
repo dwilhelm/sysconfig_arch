@@ -691,3 +691,5 @@ readme_directory = /usr/share/doc/postfix
 inet_protocols = ipv4
 meta_directory = /etc/postfix
 shlib_directory = /usr/lib/postfix
+
+smtp_tls_security_level = may
