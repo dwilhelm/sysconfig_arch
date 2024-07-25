@@ -28,3 +28,10 @@ visudo  # Grant run rights to wheel.
 ```
 Run admin steps as the non-root user with sudo. Run all remaining steps from
 the repo root to install config files.
+
+### iptables
+```bash
+pacman -Sy iptables
+./install_iptables.sh
+systemctl enable iptables
+```
