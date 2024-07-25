@@ -81,6 +81,9 @@ and set reverse DNS in linode in Linodes / Network / IP Addresses / Edit RDNS.
 ```bash
 pacman -Sy spamassassin
 ./install_spamassassin.sh
+sa-update
+sa-compile
+systemctl enable spamassassin
 ```
 - https://wiki.archlinux.org/title/SpamAssassin
 - https://wiki.archlinux.org/title/Postfix#SpamAssassin
