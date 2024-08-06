@@ -693,3 +693,6 @@ meta_directory = /etc/postfix
 shlib_directory = /usr/lib/postfix
 
 smtp_tls_security_level = may
+smtpd_tls_security_level = may
+smtpd_tls_cert_file = /etc/letsencrypt/live/example.org/fullchain.pem
+smtpd_tls_key_file = /etc/letsencrypt/live/example.org/privkey.pem

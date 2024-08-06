@@ -59,6 +59,15 @@ pacman -Sy nginx
 ./install_nginx.sh
 systemctl enable nginx
 ```
+### Certbot
+```bash
+pacman -Sy certbot certbot-nginx
+certbot --nginx  # Run certbot for example.org, set server_name in nginx.conf.
+certbot install --cert-name example.org
+./install_nginx.sh
+```
+- https://wiki.archlinux.org/title/Certbot
+- https://certbot.eff.org/instructions?ws=nginx&os=arch
 ### postfix
 ```bash
 pacman -Sy postfix
@@ -87,3 +96,13 @@ systemctl enable spamassassin
 ```
 - https://wiki.archlinux.org/title/SpamAssassin
 - https://wiki.archlinux.org/title/Postfix#SpamAssassin
+### Dovecot
+```bash
+pacman -Sy dovecot
+mkdir /etc/dovecot
+cp /usr/share/doc/dovecot/example-config/dovecot.conf etc/dovecot/
+cp -r /usr/share/doc/dovecot/example-config/conf.d etc/dovecot/
+./install_dovecot.sh
+systemctl enable dovecot
+```
+- https://wiki.archlinux.org/title/Dovecot
