@@ -15,6 +15,10 @@
 -A INPUT -p tcp --dport 80 -m state --state NEW -j ACCEPT
 -A INPUT -p tcp --dport 443 -m state --state NEW -j ACCEPT
 
+# Allow Steam Local Network Game Transfers.
+-A INPUT -p tcp --dport 27040 -j ACCEPT
+-A INPUT -p udp --dport 27031:27036 -j ACCEPT
+
 # Allow inbound traffic from established connections.
 # This includes ICMP error returns.
 -A INPUT -m state --state ESTABLISHED,RELATED -j ACCEPT
