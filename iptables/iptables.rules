@@ -16,6 +16,8 @@
 -A INPUT -p tcp --dport 443 -m state --state NEW -j ACCEPT
 
 # Allow Steam Local Network Game Transfers.
+-A INPUT -p tcp --dport 27036 -j ACCEPT
+# Allow Steam Local Network Game Transfers.
 -A INPUT -p tcp --dport 27040 -j ACCEPT
 -A INPUT -p udp --dport 27031:27036 -j ACCEPT
 
