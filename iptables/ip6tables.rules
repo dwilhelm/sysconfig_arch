@@ -12,6 +12,12 @@
 -A INPUT -p tcp --dport 80 -m state --state NEW -j ACCEPT
 -A INPUT -p tcp --dport 443 -m state --state NEW -j ACCEPT
 
+# UniFi device adoption.
+-A INPUT -p tcp --dport 7442 -m state --state NEW -j ACCEPT
+-A INPUT -p tcp --dport 7444 -m state --state NEW -j ACCEPT
+-A INPUT -p tcp --dport 7550 -m state --state NEW -j ACCEPT
+-A INPUT -p udp --dport 10001 -j ACCEPT
+
 # Allow inbound traffic from established connections.
 -A INPUT -m state --state ESTABLISHED,RELATED -j ACCEPT
 
