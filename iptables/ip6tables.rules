@@ -12,6 +12,10 @@
 -A INPUT -p tcp --dport 80 -m state --state NEW -j ACCEPT
 -A INPUT -p tcp --dport 443 -m state --state NEW -j ACCEPT
 
+# Allow mDNS.
+-A INPUT -p tcp --dport 5353 -m state --state NEW -j ACCEPT
+-A INPUT -p udp --dport 5353 -j ACCEPT
+
 # UniFi device adoption.
 -A INPUT -p tcp --dport 7442 -m state --state NEW -j ACCEPT
 -A INPUT -p tcp --dport 7444 -m state --state NEW -j ACCEPT
